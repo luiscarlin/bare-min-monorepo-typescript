@@ -4,7 +4,9 @@
   "license": "WTFPL",
   "scripts": {
     "start": "parcel index.html --port 3000 --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "lint:check": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint:fix": "yarn lint:check --fix"
   },
   "dependencies": {
     "react": "^16.13.1",
@@ -13,7 +15,14 @@
   "devDependencies": {
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
     "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
     "typescript": "^3.9.3"
   }
 }
